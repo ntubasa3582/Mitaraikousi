@@ -43,10 +43,7 @@ public class ObjectMove : MonoBehaviour //オブジェクトを直線移動さ�
     void OnTriggerEnter(Collider other)
     {
         //Itemタグが付いたオブジェクトに触れたらスコアを加算する
-        if (other.gameObject.CompareTag("Item"))
-        {
             _scoreManager.AddScore(1);
             Destroy(other.gameObject);
-        }
     }
 }
